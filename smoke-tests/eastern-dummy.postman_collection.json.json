@@ -24,7 +24,7 @@
               }
             }
           ],
-          "_postman_id": "606bf218-f746-4149-9774-d3f11e638076",
+          "id": "606bf218-f746-4149-9774-d3f11e638076",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -36,7 +36,7 @@
           "response": []
         }
       ],
-      "_postman_id": "012042ab-8790-42d2-ae7b-6a36073d03de"
+      "id": "012042ab-8790-42d2-ae7b-6a36073d03de"
     },
     {
       "name": "Eastern.Weather.GetForecast",
@@ -49,6 +49,7 @@
               "script": {
                 "id": "46dcc121-a7e5-418c-9113-8d53f4e957c4",
                 "exec": [
+                  "// This is a neat edit.\r",
                   "pm.test(\"Status code is 200\", function () {\r",
                   "    pm.response.to.have.status(200);\r",
                   "});"
@@ -57,7 +58,7 @@
               }
             }
           ],
-          "_postman_id": "e74b5e38-eddd-4aeb-a1d8-908b30c1ea80",
+          "id": "e74b5e38-eddd-4aeb-a1d8-908b30c1ea80",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -69,7 +70,7 @@
           "response": []
         }
       ],
-      "_postman_id": "aa170d80-9407-45ea-9817-9e5f63ea697d"
+      "id": "aa170d80-9407-45ea-9817-9e5f63ea697d"
     }
   ]
 }
