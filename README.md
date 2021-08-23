@@ -1,0 +1,1 @@
+This repository contains smoke tests.
