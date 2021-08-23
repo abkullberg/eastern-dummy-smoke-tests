@@ -1,0 +1,83 @@
+{
+  "info": {
+    "_postman_id": "4f0f8125-4ed1-4698-ab26-ee17040dff67",
+    "name": "eastern-dummy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Eastern.Dummy.Placeholder",
+      "item": [
+        {
+          "name": "Get Google",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e245c41a-ee13-4c6d-9bad-80a0eb0f0563",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "8eec4f5f-cd07-4773-8504-26d5445be73b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://www.google.com"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "9df4a30f-37da-4118-ad14-03953e32608a"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "beb59166-3f15-4d7c-82d1-50e76a717011",
+        "type": "text/javascript",
+        "exec": [
+          "var virtualHost = pm.environment.get(\"virtualhost-default\");",
+          "",
+          "// Map the environment to the correct azure post fix",
+          "var azurePostFix = null;",
+          "switch(virtualHost) {",
+          "    case 'api.easternbank.com':",
+          "        azurePostFix = 'preprod';",
+          "        break;",
+          "    case 'api-readiness.easternbank.com':",
+          "        azurePostFix = 'qa';",
+          "        break;",
+          "    case 'api-staging.easternbank.com':",
+          "    case 'api-uat.easternbank.com':",
+          "        azurePostFix = 'staging';",
+          "        break;",
+          "    default:",
+          "        azurePostFix = 'integration';",
+          "}",
+          "",
+          "pm.environment.set(\"azure-postfix\", azurePostFix);"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "fb1f86e8-f2a0-44ef-830f-d387104088ba",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
