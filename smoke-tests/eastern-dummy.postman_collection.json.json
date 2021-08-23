@@ -16,7 +16,6 @@
               "script": {
                 "id": "5cb3045a-da12-40bd-814b-a44554c833f0",
                 "exec": [
-                  "// Edits in the GetCurrentTemperature smoke test!!\r",
                   "pm.test(\"Status code is 200\", function () {\r",
                   "    pm.response.to.have.status(200);\r",
                   "});"
@@ -50,7 +49,6 @@
               "script": {
                 "id": "46dcc121-a7e5-418c-9113-8d53f4e957c4",
                 "exec": [
-                  "// This is a neat edit.\r",
                   "pm.test(\"Status code is 200\", function () {\r",
                   "    pm.response.to.have.status(200);\r",
                   "});"
